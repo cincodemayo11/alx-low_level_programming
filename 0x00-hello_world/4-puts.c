@@ -1,6 +1,13 @@
 #include <stdio.h>
 
-/*This prints using the ~puts~ function*/
+/**
+ *main - Entry point
+ *
+ *This prints using the ~puts~ function
+ *
+ *Return: Always 0 (Success)
+ */
+
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
