@@ -11,7 +11,8 @@
 int main(void)
 {
 	char alp = 'a';
-	for(; alp < 'z'; alp++)
+	
+	for (; alp <= 'z'; alp++)
 	{
 		putchar(alp);
 	}
