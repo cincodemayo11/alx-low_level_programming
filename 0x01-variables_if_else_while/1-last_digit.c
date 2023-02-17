@@ -19,11 +19,11 @@ int main(void)
 	{
 		printf("is greater than 5\n");
 	}
-	if (n % 10 < 6 && n != 0)
+	else if (n % 10 < 6 && n != 0)
 	{
 		printf("is less than 6 and not 0\n");
 	}
-	else
+	else if (n % 10 == 0)
 	{
 		printf("is 0\n");
 	}
