@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+/**
+ *main - Entry point
+ *
+ *Write alphabet in putchar
+ *
+ *return: 0 (Always success)
+ **/
+
+int main(void)
+{
+	char lo = 'a';
+	char up = 'A';
+
+	for(;lo <= 'z'; lo++)
+	{
+		for(;up <= 'Z'; up++)
+		{
+			putchar(up);
+		}
+		putchar(lo);
+	}
+	putchar('\n');
+	return (0);
+}
