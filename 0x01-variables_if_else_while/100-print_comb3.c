@@ -9,7 +9,7 @@
 int main(void)
 {
 	int num1 = 48;
-	char num2;
+	int num2;
 
 	for (; num1 < 57; num1++)
 	{
