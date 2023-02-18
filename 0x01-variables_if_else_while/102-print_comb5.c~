@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+/**
+ *main = print unique two two-digit combos
+ *
+ *Return: Always 0 (Success)
+ */
+
+int main(void)
+{
+	int num1;
+	int num2;
+	int num3;
+	int num4;
+	int num0 = 48;
+
+	for (; num0 < 57; num0++)
+	{
+	for (num1 = num0 + 1; num1 < 57; num1++)
+	{
+		for (num2 = num1 + 1; num2 < 57; num2++)
+		{
+			putchar(num2);
+			putchar(num1);
+			putchar(' ');
+		}
+	}
+  	for (num3 = num2 + 1; num3 < 57; num3++)
+	{
+		for (num4 = num3 + 1; num4 <= 57; num4++)
+		{
+			putchar(' ');
+			putchar(num4);
+			putchar(num3);
+		}
+	}
+	return (0);
+}
