@@ -2,11 +2,11 @@
 
 int _islower(int c)
 {
-	if (c >= 97 && c <= 122)
+	if (c >= 'a' && c <= 'z')
 	{
 		return (1);
 	}
-	else if (c >= 65 && c <=90)
+	else if (c >= 'A' && c <= 'Z')
 		{
 			return (0);
 		}
