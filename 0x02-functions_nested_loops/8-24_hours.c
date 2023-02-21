@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ *jack_bauer - prints all the minutes of the day
+ *
+ *Return: Always void (Success)
+ */
+
 void jack_bauer(void)
 {
 
