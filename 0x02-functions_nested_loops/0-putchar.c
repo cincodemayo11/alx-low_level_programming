@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-/*
- *main - prints _putchar
- *
- *Return: Always 0 (Success)
- *
- **/
+/**
+ * main - Entry point.
+ * Description: write a program that prints "_putchar" followed by a new line.
+ * Return: Always 0 (Success.)
+ */
 
 int main(void)
 {
@@ -13,11 +12,11 @@ int main(void)
 	putchar('p');
 	putchar('u');
 	putchar('t');
-        putchar('c');
-        putchar('h');
+	putchar('c');
+	putchar('h');
 	putchar('a');
-        putchar('r');
-        putchar('\n');
+	putchar('r');
+	putchar('\n');
 
 	return (0);
 }
