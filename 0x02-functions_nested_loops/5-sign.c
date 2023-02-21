@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+ *print_sign - shows if an int is positive negative or zero
+ *
+ *@n: the number being categorized
+ *
+ *Return: 1 for positive, -1 for negative and 0 for zero
+ */
+
 int print_sign(int n)
 {
 	if (n > 0)
