@@ -1,17 +1,14 @@
 #include "main.h"
-
 /**
- *print_square - prints a square
+ * print_square - prints a square
  *
- *@size: is the size of the sqaure
+ * @size: size of square
  *
- *Return: void
+ * Return: void
  */
-
 void print_square(int size)
 {
-	int i = 1;
-	int j;
+	int i, j;
 
 	if (size <= 0)
 	{
@@ -19,17 +16,14 @@ void print_square(int size)
 	}
 	else
 	{
-		while (i <= size)
+		for (i = 1; i <= size; i++)
 		{
-			j = 1;
-			while(j < size)
+			_putchar('#');
+			for (j = 1; j < size; j++)
 			{
 				_putchar('#');
-				j++;
 			}
-			_putchar('#');
 			_putchar('\n');
-			i++;
 		}
 	}
 }
