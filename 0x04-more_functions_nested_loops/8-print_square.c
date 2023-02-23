@@ -10,7 +10,7 @@
 
 void print_square(int size)
 {
-	int i;
+	int i = 1;
 	int j;
 
 	if (size <= 0)
@@ -19,7 +19,6 @@ void print_square(int size)
 	}
 	else
 	{
-		i = 1;
 		while (i <= size)
 		{
 			j = 1;
