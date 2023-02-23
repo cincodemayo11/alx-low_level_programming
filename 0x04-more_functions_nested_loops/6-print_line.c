@@ -4,6 +4,8 @@
  *print_line - prints a line
  *
  *@n: length of line
+ *
+ *Return: void
  */
 
 void print_line(int n)
