@@ -1,0 +1,35 @@
+#include "main.h"
+
+/**
+ *print_diagonal - prints a diagonal line
+ *
+ *@n: length of line
+ *
+ *Return: void
+ */
+
+
+void print_diagonal(int n)
+{
+	int j = 0;
+	int i;
+
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
+	else{
+		while (j < n)
+		{
+			i = 0;
+			while (i < j)
+			{
+				_putchar(' ');
+				i++;
+			}
+			_putchar('\\');
+			_putchar('\n');
+			j++;
+		}
+	}
+}
