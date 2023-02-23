@@ -3,8 +3,6 @@
 /**
  *main - prints fizz
  *
- *@i: the number
- *
  *Return: Always 0 (Success.)
  */
 
