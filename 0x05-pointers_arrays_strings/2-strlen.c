@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *_strlen(char) - counts chars in a string
+ *_strlen - counts chars in a string
  *
  *@s: the string itself
  *
