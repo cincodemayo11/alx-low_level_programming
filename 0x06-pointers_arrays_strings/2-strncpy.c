@@ -1,3 +1,4 @@
+
 #include "main.h"
 
 /**
@@ -12,16 +13,22 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i = 0;
+	int i;
+	int j;
 
-	while (i < n && *(src + i))
+	for (i = 0; dest[i] != '\0'; i++)
 	{
-		*(dest + i) = *(src + i)
-			i++;
 	}
-	while (i < n)
+
+	for (j = 0; j <= n; j++)
 	{
-		*(src + i) = '\0';
+		dest[j] = src[j];
+	}
+
+	while (n > i)
+	{
+		dest[i] = '\0';
+		i++;
 	}
 	return (dest);
 }
