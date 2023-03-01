@@ -1,0 +1,21 @@
+Loading /etc/emacs/site-start.d/00debian.el (source)...done
+For information about GNU Emacs and the GNU system, type C-h C-a.
+Auto-saving...done
+Mark set
+Auto-saving...done
+Auto-saving...done
+Mark set
+next-line: End of buffer
+Auto-saving...done
+delete-forward-char: End of buffer [2 times]
+Mark set [2 times]
+Auto-saving...
+Mark set [2 times]
+Auto-saving...done
+C-M-x C-c is undefined
+completing-read-default: Command attempted to use minibuffer while in minibuffer [2 times]
+Wrote /alx-low_level_programming/0x06-pointers_arrays_strings/*Messages*
+command-execute: Buffer is read-only: #<buffer *Messages*>
+Save file /alx-low_level_programming/0x06-pointers_arrays_strings/*Messages*? (y, n, !, ., q, C-r, d or C-h) 
+Save file /alx-low_level_programming/0x06-pointers_arrays_strings/*Messages*? (y, n, !, ., q, C-r, d or C-h) y
+Saving file /alx-low_level_programming/0x06-pointers_arrays_strings/*Messages*...
