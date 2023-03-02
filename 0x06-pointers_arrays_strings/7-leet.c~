@@ -1,0 +1,22 @@
+#include "main.h"
+
+char *leet(char *c)
+{
+	int i;
+	int letter[256] = {0};
+
+	letter[(int)'a'] = letter[(int)'A'] = '4';
+	letter[(int)'e'] = letter[(int)'E'] = '3';
+	letter[(int)'o'] = letter[(int)'O'] = '0';
+	letter[(int)'t'] = letter[(int)'T'] = '7';
+	letter[(int)'l'] = letter[(int)'L'] = '1';
+
+	for (i = 0; c[i] != '\0'; i++)
+	{
+		if (letter[(int)c[i]])
+		{
+			c[i] = letter[(int)c[i]];
+		}
+	}
+	return (c);
+}
