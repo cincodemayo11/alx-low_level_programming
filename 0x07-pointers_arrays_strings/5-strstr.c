@@ -35,6 +35,11 @@ char *_strstr(char *haystack, char *needle)
 			j++;
 			comp++;
 		}
+		if (needle[k] != '\0')
+		{
+			k = 0;
+			comp = 0;
+		}
 	}
 	if (comp == count)
 		return (haystack + j - comp);
