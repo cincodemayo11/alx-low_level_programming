@@ -1,0 +1,22 @@
+#include "main.h"
+
+/**
+ *_memset - replaces n bytes of s to fixed byte b
+ *
+ *@s: the array being replaced
+ *@b: the fixed bytes we are implanting
+ *@n: the number of bytes being replaced
+ *
+ *Return: s the array
+ */
+
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int i = 0;
+
+	for (; i < n; i++)
+	{
+		s[i] = b;
+	}
+	return (s);
+}
