@@ -14,6 +14,7 @@ int _strlen_recursion(char *s)
 
 	if (c == '\0')
 	{
+		return (count);
 	}
 	else if (c != '\0')
 	{
