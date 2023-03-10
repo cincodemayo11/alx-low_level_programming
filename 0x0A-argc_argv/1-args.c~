@@ -1,0 +1,15 @@
+#include <stdio.h>
+/**
+ *main - prints how many arguments are passed
+
+ *@argc: number of arguments
+ *@:argv: the actual arguments
+ *
+ *Return: 0 (Always success.)
+ */
+
+int main(int argc, char *argv[] __attribute__ ((unused)))
+{
+	printf("%d\n", argc);
+	return (0);
+}
