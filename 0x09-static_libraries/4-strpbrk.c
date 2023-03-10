@@ -1,0 +1,29 @@
+#include "main.h"
+
+/**
+ *_strpbrk - locates the first occurrence in a string
+ *of any of the bytes in another string
+ *
+ *@s: the first string
+ *@accept: the second string
+ *
+ *Return: pointer to position of first occurence
+ */
+
+char *_strpbrk(char *s, char *accept)
+{
+	int i = 0;
+	int j;
+
+	for (; *(s + i) != '\0'; i++)
+	{
+		for (j = 0; *(accept + j) != '\0';  j++)
+		{
+			if (s[i] == accept[j])
+			{
+				return (s + i);
+			}
+		}
+	}
+	return ('\0');
+}

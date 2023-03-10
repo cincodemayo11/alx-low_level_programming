@@ -1,0 +1,29 @@
+#include "main.h"
+
+/**
+ *_strncat - appends n number bytes from src to dest
+ *
+ *@dest: the destination
+ *@src: the source
+ *@n: the number of bytes
+ *
+ *Return: dest
+ */
+
+char *_strncat(char *dest, char *src, int n)
+{
+	int i = 0;
+	int j = 0;
+
+	for (; *(dest + i) != '\0'; i++)
+	{
+	}
+
+	for (; j < n && *(src + j) != '\0'; j++, i++)
+	{
+		*(dest + i) = *(src + j);
+	}
+	*(dest + i) = '\0';
+
+	return (dest);
+}
