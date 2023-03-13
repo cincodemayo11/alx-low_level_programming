@@ -19,7 +19,7 @@ char *_strdup(char *str)
 		size++;
 	}
 
-	if (str[0] == NULL)
+	if (str[0] == '\0')
 	{
 		return (NULL);
 	}
@@ -29,7 +29,7 @@ char *_strdup(char *str)
 		return ('\0');
 	}
 
-	c = malloc(size * sizeof(str[0]));
+	c = malloc((size + 1) * sizeof(str[0]));
 
 	if (c == NULL)
 	{
@@ -40,6 +40,7 @@ char *_strdup(char *str)
 	{
 		c[j] = str[j];
 	}
+	c[size] = '\0';
 
 	return (c);
 }
