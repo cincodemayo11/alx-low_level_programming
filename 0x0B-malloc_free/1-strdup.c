@@ -21,7 +21,7 @@ char *_strdup(char *str)
 
 	if (str[0] == '\0')
 	{
-		return ('\0');
+		return (NULL);
 	}
 
 	if (size == 0)
