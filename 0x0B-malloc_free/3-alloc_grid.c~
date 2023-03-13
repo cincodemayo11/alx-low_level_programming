@@ -1,0 +1,22 @@
+#include <stdlib.h>
+
+int **alloc_grid(int width, int height)
+{
+	int **c;
+	int i = 0;
+	int j = 0;
+
+	if (width == 0 || height == 0)
+		return (NULL);
+
+	c = malloc((height) * (sizeof(int *)));
+
+	for (; i < height; i++)
+	{
+		c[i] = malloc(width * sizeof(int));
+
+		for (; j < width; j++)
+			c[i][j] = 0;
+	}
+	return (c);
+}
