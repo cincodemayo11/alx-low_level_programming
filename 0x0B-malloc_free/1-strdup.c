@@ -19,7 +19,7 @@ char *_strdup(char *str)
 		size++;
 	}
 
-	if (str[0] == '\0')
+	if (str[0] == NULL)
 	{
 		return (NULL);
 	}
@@ -30,6 +30,11 @@ char *_strdup(char *str)
 	}
 
 	c = malloc(size * sizeof(str[0]));
+
+	if (c == NULL)
+	{
+		return (NULL);
+	}
 
 	for (; str[j] != '\0'; j++)
 	{
