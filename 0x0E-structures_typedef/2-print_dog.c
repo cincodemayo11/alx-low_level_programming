@@ -7,7 +7,6 @@
  *
  *@d: struct containing dog's details
  *
- *Return: void
  */
 
 void print_dog(struct dog *d)
