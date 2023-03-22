@@ -1,5 +1,5 @@
-#ifndef _CALC_
-#define _CALC_
+#ifndef _CALC_H_
+#define _CALC_H_
 
 /**
  *struct op - calls the calculating functions
