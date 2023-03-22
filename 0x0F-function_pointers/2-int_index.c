@@ -1,0 +1,33 @@
+#include "function_pointers.h"
+
+/**
+ *int_index - iterates over an array and executes a func on it
+ *
+ *@array: an array of numbers
+ *@size: size of the array
+ *@cmp: the func comparing elements of the array
+ *
+ *Return: the index of the first element in the array that isn't false
+ *
+ */
+
+int int_index(int *array, int size, int (*cmp)(int))
+{
+	int i;
+
+	if (array && cmp)
+	{
+		if (size <= 0)
+		{
+			return (-1);
+		}
+		for (i = 0; i < size; i++)
+		{
+			if (cmp(array[i]))
+			{
+				return (i);
+			}
+		}
+	}
+	return (-1);
+}
