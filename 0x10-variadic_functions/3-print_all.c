@@ -12,62 +12,44 @@
 
 void print_all(const char * const format, ...)
 {
-	char alp;
-	int alpint;
-	int dig;
-	float dec;
-	double decdub;
-	char *str;
 	va_list list;
-	int comma = 0;
-	const char *ptr;
+	unsigned int i = 0, comma = 0, j;
+	char *str;
+	const char args[] = "cifs";
 
-	ptr = format;
 	va_start(list, format);
-	while (*ptr)
+	while (format && format[i])
 	{
-		if (*ptr == 'c')
+		j = 0;
+		while (args[j])
 		{
-			alpint = va_arg(list, int);
-			alp = (char)alpint;
-			printf("%c", alp);
-			comma = 1;
+			if (format[i] == args[j] && comma)
+			{
+				printf(", ");
+				break;
+			} j++;
 		}
-		if (*ptr == 'i')
+		switch (format[i])
 		{
-			dig = va_arg(list, int);
-			printf("%d", dig);
-			comma = 1;
-		}
-		if (*ptr == 'f')
-		{
-			decdub = va_arg(list, double);
-			dec = (float)decdub;
-			printf("%f", dec);
-			comma = 1;
-		}
-		if (*ptr == 's')
-		{
-			str = va_arg(list, char *);
-			if (str == NULL)
+		case 'c':
+			printf("%c", va_arg(list, int)), comma = 1;
+			break;
+		case 'i':
+			printf("%d", va_arg(list, int)), comma = 1;
+			break;
+		case 'f':
+			printf("%f", va_arg(list, double)), comma = 1;
+			break;
+		case 's':
+			str = va_arg(list, char *), comma = 1;
+			if (!str)
 			{
 				printf("(nil)");
-				comma = 1;
+				break;
 			}
-			else
-			{
-				printf("%s", str);
-				comma = 1;
-			}
-		}
-		if (*(ptr + 1) && comma)
-		{
-			printf(", ");
-			comma = 0;
-		}
-
-		ptr++;
+			printf("%s", str);
+			break;
+		} i++;
 	}
-	printf("\n");
-	va_end(list);
+	printf("\n"), va_end(list);
 }
