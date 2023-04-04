@@ -1,0 +1,21 @@
+#include "lists.h"
+
+int pop_listint(listint_t **head)
+{
+	listint_t *new;
+	listint_t *current;
+	int value;
+
+	if (*head == NULL)
+	{
+		return (0);
+	}
+
+	current = *head;
+	value = current->n;
+	new = current->next;
+	free(current);
+	*head = new;
+
+	return (value);
+}
