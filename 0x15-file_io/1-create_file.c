@@ -18,9 +18,6 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	for (strlen = 0; text_content[strlen] != '\0'; strlen++)
-		;
-
 	openf = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (openf == -1)
 	{
@@ -32,9 +29,12 @@ int create_file(const char *filename, char *text_content)
 		text_content = "";
 	}
 
+	for (strlen = 0; text_content[strlen] != '\0'; strlen++)
+		;
+
 	written = write(openf, text_content, strlen);
 
-	if (written != strlen)
+	if (written == -1)
 	{
 		close(openf);
 		return (-1);
