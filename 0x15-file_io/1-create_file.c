@@ -14,7 +14,7 @@ int create_file(const char *filename, char *text_content)
 	int openf, strlen;
 	ssize_t written;
 
-	if (filename == NULL)
+	if (!filename)
 	{
 		return (-1);
 	}
@@ -22,7 +22,7 @@ int create_file(const char *filename, char *text_content)
 	for (strlen = 0; text_content[strlen] != '\0'; strlen++)
 		;
 
-	openf = open(filename, O_CREAT | O_WRONLY, S_IRUSR | S_IWUSR);
+	openf = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (openf == -1)
 	{
 		return (-1);
@@ -30,7 +30,7 @@ int create_file(const char *filename, char *text_content)
 
 	written = write(openf, text_content, strlen);
 
-	if (written == -1)
+	if (written != strlen)
 	{
 		close(openf);
 		return (-1);
