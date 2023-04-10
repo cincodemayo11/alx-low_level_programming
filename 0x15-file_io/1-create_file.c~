@@ -1,0 +1,31 @@
+#include "main.h"
+
+int create_file(const char *filename, char *text_content)
+{
+	int openf, strlen;
+	ssize_t written;
+
+	if (filename == NULL)
+	{
+		return (-1);
+	}
+
+	for (strlen = 0; text_content[strlen] != '\0'; strlen++)
+		;
+
+	openf = open(filename, O_CREAT | O_WRONLY, S_IRUSR | S_IWUSR);
+	if (openf == -1)
+	{
+		return (-1);
+	}
+
+	written = write(openf, text_content, strlen);
+
+	if (written == -1)
+	{
+		close(openf);
+		return (-1);
+	}
+	close(openf);
+	return (1);
+}
