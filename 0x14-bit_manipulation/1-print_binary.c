@@ -12,6 +12,11 @@ void print_binary(unsigned long int n)
 {
 	int binum, i, dig = 0;
 
+	if (n == 0)
+	{
+		_putchar('0');
+	}
+
 	for (i = 31; i >= 0; i--)
 	{
 		binum = n >> i;
@@ -25,9 +30,5 @@ void print_binary(unsigned long int n)
 		{
 			_putchar('0');
 		}
-	}
-	if (!dig)
-	{
-		_putchar('0');
 	}
 }
