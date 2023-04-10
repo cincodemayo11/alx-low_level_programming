@@ -11,15 +11,14 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int openf, strlen;
-	ssize_t written;
+	int openf, strlen, written = 0;
 
 	if (!filename)
 	{
 		return (-1);
 	}
 
-	for (strlen = 1; text_content[strlen] != '\0'; strlen++)
+	for (strlen = 0; text_content[strlen] != '\0'; strlen++)
 		;
 
 	openf = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
