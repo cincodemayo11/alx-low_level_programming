@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *qppend_text_to_file - a function that appends text at the end of a file
+ *append_text_to_file - a function that appends text at the end of a file
  *
  *@filename: the name of the file
  *@text_content: the NULL terminated string to add at the end of the file
@@ -15,7 +15,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	int strlen;
 	int written;
 
-	if (filename == 0)
+	if (filename)
 	{
 		return (-1);
 	}
@@ -26,7 +26,7 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	if (text_content != NULL)
+	if (text_content)
 	{
 		for (strlen = 0; text_content[strlen] != '\0'; strlen++)
 			;
